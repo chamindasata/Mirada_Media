@@ -9,7 +9,7 @@ phases:
     install:
         run-as: Ubuntu 18.04
         runtime-versions:
-          runtime: nodejs: 10
+            nodejs: 10
         commands:
             - echo Installing source NPM dependencies...
             - npm install
