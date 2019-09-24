@@ -3,7 +3,7 @@ env:
     variables:
         CACHE_CONTROL: "86400"
         S3_BUCKET: "dev.demotest"
-        BUILD_FOLDER: "mirada_media"
+        BUILD_FOLDER: "codepipeline-us-east-1-91014834567"
         BUILD_ENV: "prod"
 phases:
     install:
