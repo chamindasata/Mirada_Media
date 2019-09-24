@@ -1,0 +1,89 @@
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    /* margin-bottom: 15px; */
+  }
+  .label-mp{
+    color: rgba(255,255,255,0.5);
+    font-size: 16px;
+    font-weight: 500 !important;
+  }
+  .label-data{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500 !important;
+  }
+  .rectangle-close {	
+    height: 64px;	
+    width: 125px;	
+    border-radius: 4px;
+    color: #28DCCF;	
+    background-color: #06656B;
+    font-family: Montserrat;	
+    font-size: 18px;	
+    font-weight: 500;
+    letter-spacing: 0.17px;	
+    line-height: 39px;	
+    text-align: center;
+  }
+  .rectangle-edit {	
+    height: 64px;	
+    width: 120px;	
+    border-radius: 4px;	
+    background-color: #333333;
+    color: rgb(168, 166, 166);	
+    font-family: Montserrat;	
+    font-size: 18px;	
+    font-weight: 500;	
+    letter-spacing: 0.17px;	
+    line-height: 39px;	
+    text-align: center;
+  }
+    .rectangle-fristname {	
+        width: 100%;	
+    }
+    .white{
+      color: #ffffff
+    }
+
+    .label-search{
+        color: rgba(255,255,255,0.5);
+        font-weight: 500 !important;
+        }
+    
+     .inline-search{
+        border: 0 !important;
+        outline: 0;
+        border-radius: 0;
+        background-color: #181818 !important;
+        border-bottom: 1px solid #b6babb !important;
+        padding: 0;
+     }
+     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 25px;
+         
+      }
+    .add-new{
+        color: #28dccf;
+        font-size: 20px;
+        font-weight: 500 !important;
+    }
+    
+    .add-new-middle{
+        text-align: right;
+        display: block;
+         
+    }
+    .input-container {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        width: 100%;
+        /* margin-bottom: 15px; */
+      }
+    
+      .center{
+        justify-content: center;
+      }
+    
+     

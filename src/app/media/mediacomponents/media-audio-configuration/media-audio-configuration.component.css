@@ -1,0 +1,51 @@
+.upload-audio-section{
+    border: 1px dashed #979797;
+    border-radius: 5px;
+    min-height: 200px;
+}
+.or-drag-drop-audio {		color: #B3B3B3;	font-family: Montserrat;	font-size: 16px;	font-weight: 500;	letter-spacing: 0.38px;	line-height: 28px;	text-align: center;}
+
+.choose-audio {	    margin-top: 10%;	font-family: Montserrat;	font-size: 16px;	font-weight: 500;	letter-spacing: 0.38px;	line-height: 28px;	text-align: center;}
+
+:host /deep/  .track-play{
+/* padding-top: 0px !important; */
+margin-right: 10px;
+margin-top: 5px;
+}
+:host /deep/ .k-widget {
+ 
+    font-size: 0.9rem;
+    line-height: 1.5;
+    
+  }
+
+  .border-filter-sec{
+      border: 1px solid grey;
+  }
+  .border-top-label{
+    position: absolute;
+    /* border: 1px solid blue; */
+    background: #403e3e;
+    margin-top: -16px;
+    padding: 5px;
+
+
+  }
+
+  .bg-border-black{
+    background-color: #282828 !important;
+  
+    border: 1px solid #282828 !important;
+  }
+
+
+  :host >>> .k-grid-header{
+background-color: #403e3e
+  }
+
+  .m-top-40{
+    margin-top: -40px;
+  }
+  .zindex-99{
+    z-index: 999;
+  }

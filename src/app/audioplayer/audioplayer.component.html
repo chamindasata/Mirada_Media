@@ -1,0 +1,114 @@
+<!-- <p>
+  audioplayer works!
+</p> -->
+<section class="current-track">
+  <section class="playing">
+
+     <div class="playing__art">
+
+       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" />
+
+     </div>
+
+     <div class="playing__song">
+
+       <a class="playing__song__name">{{__currentTrack?.name}}</a>
+
+       <a class="playing__song__artist">Charlie Puth</a>
+
+     </div>
+
+     <div class="playing__add">
+
+       <i class="ion-checkmark"></i>
+
+     </div>
+
+   </section>
+
+<div class="cover-musicplayer">
+
+<div class="current-track__actions">
+
+ <a class="ion-ios-skipbackward" id="previous" (click)="__previousTrack()"></a>
+
+ <a class="ion-ios-play play" id="play" (click)="__playTrack()"></a>
+
+ <a class="ion-ios-skipforward" id="next" (click)="__nextTrack()"></a>
+
+ <a class="la la-pause" id="pause" (click)="__pauseTrack()"></a>
+ <a class="la la-stop" id="stop" (click)="__stopTrack()"></a>
+
+</div>
+
+<div class="current-track__progress">
+    
+    <div class="current-track__progress__start">{{this.__audio.currentTime | millitosecound}}</div>  
+  <mat-slider 
+  min="0"
+  max="{{__audio.duration}}"
+  step="0.1"
+  value="{{__audio.currentTime}}"
+  (change)="__setProgress($event.value)">
+</mat-slider>
+
+<div class="current-track__progress__finish">{{__audio.duration | millitosecound}}</div>
+  
+ <!-- <div class="current-track__progress__start">0:01</div>
+
+ <div class="current-track__progress__bar">
+
+   <div id="song-progress"></div>
+
+ </div>
+
+ <div class="current-track__progress__finish">3:07</div> -->
+
+</div>
+
+</div>
+
+
+<div class="current-track__options">
+
+ <!-- <a href="#" class="lyrics">Lyrics</a> -->
+
+ <span class="controls">
+ 
+   <!-- <a href="#" class="control">
+     <i class="ion-navicon"></i>
+   </a> -->
+   
+   <!-- <a href="#" class="control">
+     <i class="ion-shuffle"></i>
+   </a>
+   
+   <a href="#" class="control">
+     <i class="fa fa-refresh"></i>
+   </a> -->
+   
+   <!-- <a href="#" class="control devices">
+     <i class="ion-iphone"></i>
+     <span>Devices Available</span>
+ </a> -->
+
+ <a href="#" class="control volume">
+     
+     <i class="ion-volume-high"></i>
+   
+     <!-- <div id="song-volume"></div> -->
+     <mat-slider 
+     min="0"
+     max="1"
+     step="0.001"
+     value="{{__audio.volume}}"
+     (change)="__setVolume($event.value)">
+   </mat-slider>
+     
+   </a>
+
+ </span>
+
+</div>
+
+</section>

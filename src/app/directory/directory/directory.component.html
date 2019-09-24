@@ -1,0 +1,43 @@
+<div class="row m-0 pad-20" >
+
+<div class=" col-md-12 musiclist bg-media-black text-white">
+    <h3 class=""> <i class="la  la-user-plus"></i> Directory</h3>
+</div>   
+
+<div class="row col-md-4 pad-20">
+
+    <div class="col-md-12">
+     <div class="input-container">
+      <input type="text" class="form-control inline-search" placeholder="Search">
+      <h3><i class="la  la-search text-white"></i></h3>
+    </div>
+      <small class="form-text text-muted">Search-Names, Titles, Companies, etc.</small>
+    </div>
+
+</div>
+<div class="row col-md-4 pad-20">
+ 
+</div>
+<div class="row col-md-4 pad-20">
+
+  <div class="col-md-12 add-new-middle">
+    <a routerLink="#" class="add-new" (click)="addcontact()"> <i class="la la-plus-circle"></i> Add New </a>
+  </div>
+
+</div>
+
+<app-directory-grid (selectedGrid)="selectedGrid($event)"></app-directory-grid>
+
+</div>
+<div bsModal #addContact="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+  aria-labelledby="dialog-child-name">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <app-directory-addcontact></app-directory-addcontact>
+        
+
+      </div>
+    </div>
+  </div>
+</div>

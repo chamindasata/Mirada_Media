@@ -1,0 +1,61 @@
+<div class="card">
+    <div class="card-header">
+      Audio
+    </div>
+    <div class="card-body">
+        <!-- <table cdkDropList class="table table-responsive table-borderless table-striped" (cdkDropListDropped)="drop($event)">
+            <tr *ngFor="let item of details.audioDetail" cdkDrag>
+              <td>
+                <span class="la la-2x la-music"></span>
+              </td>
+              <td width="75%">
+                <div>{{item.Name}}</div>
+                <div>{{item.type}}</div>
+              </td>
+              <td>  <span class="la la-2x la-cloud-download"></span></td>
+              <td>  <span class="la la-2x la-external-link"></span></td>
+              <td>  <div  class="float-left  track-play"><i  class="ion-ios-play play la-2x"></i></div></td>
+            </tr>
+          </table> -->
+
+        
+        
+    </div>
+  </div>
+<!-- 
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of details.audioDetail" cdkDrag>{{item.Name}}</div>
+  </div> -->
+
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of details.audioDetail" cdkDrag>
+      <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+      <div>
+     <div class="mu_logo text-center">
+      <span class="la la-2x la-music "></span>
+     </div>
+        <div class="mu_secoundpart">
+        
+        <div class="mu_name">
+          <div class="font-weight-bold">{{item.Name}}</div>
+          <div>{{item.type}}</div>
+        </div>
+        <div class="mu_options text-right">
+         <div  class="float-right  track-play"><i  class="ion-ios-play play la-2x"></i></div>
+         <span class="la la-2x la-cloud-download mr-1"></span>
+         <span class="la la-2x la-external-link mr-1"></span>
+        </div>
+      </div>
+
+      </div>
+<!--      
+      {{item.Name}} -->
+    </div>
+  </div>
+
+  <!-- <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+      <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+      {{movie}}
+    </div>
+  </div> -->

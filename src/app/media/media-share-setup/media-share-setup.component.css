@@ -1,0 +1,27 @@
+.calendaricon-control{
+    position: absolute;
+    margin-top: -25px;
+    right: 5%;
+}
+
+:host >>> .angular-editor-toolbar {
+    font: 100 .8rem/15px Roboto,Arial,sans-serif;
+    background-color: #000000 !important;
+    padding: .2rem;
+    border: 1px solid #000000 !important;;
+}
+
+:host >>> .angular-editor-toolbar .angular-editor-toolbar-set {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #b9b9b9 !important;
+    margin-right: 5px;
+    vertical-align: middle;
+    border: 1px solid #000 !important;
+    margin-bottom: 3px;
+}
+
+#editor{
+    min-height: 150px !important;
+
+}

@@ -1,0 +1,70 @@
+<div class="new-asset-modal">
+  <div class="modal-header asset-modal-header">
+    <h2 class="modal-title pull-left"><i class="la la-music"></i> Add Video</h2>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="row new-asset-row">
+    <div class="col modal-col-left">
+      <label>What folder of the library will this video files live?</label>
+      <div>
+        <select class="form-control asset-folder-dropdown" [(ngModel)]="selectedValue" (change)="onFolderChange()">
+            <option value="null">None</option>
+            <option *ngFor="let folder of folders" [ngValue]="folder">
+                {{folder.folder_name}}
+            </option>
+        </select>
+    </div>
+    </div>
+
+    <div class="col modal-col-right">
+      <button type="button" class="btn btn-primary create-mediamail-btn">Create MediaMail</button>
+      <button type="button" (click)="multipleUploadFiles()" class="btn btn-primary add-library-btn">Add to Library</button>
+    </div>
+  </div>
+
+  <div class="row new-asset-second-row">
+    <div class="col-sm upload-asset-section">
+      <input type="file" style="display: none" name="uploadVideoFiles" (change)="selectVideoFile($event.target.files)" accept="video/*" #VideoFileInput multiple>
+      <div class="text-lightgreen choose-audio"> <span class="fa fa-2x fa-cloud-upload"
+        (click)="VideoFileInput.click()">
+      </span>Choose file</div>
+    <button type="button" class="btn" (click)="VideoFileInput.click()">or Drag & Drop File Here</button>
+    </div>
+  </div>
+
+  <div class="loading-spinner" *ngIf="isloading">
+    <app-loader></app-loader>
+    </div>
+
+  <div class="modal-grid" *ngIf="!isloading">
+    <kendo-grid [kendoGridBinding]="gridData" [rowClass]="rowCallback" [groupable]="false" [selectable]="true" [selectable]="selectableSettings"
+      [rowClass]="rowCallback">
+      <kendo-grid-column [headerStyle]="{'display': 'none'}" [width]="5" class="col-icon">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          <span class="la la-music grid-icon"></span>
+        </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column [headerStyle]="{'display': 'none'}" [width]="5">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          <div class="track-play"><i class="ion-ios-play play-btn"></i></div>
+        </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column [headerStyle]="{'display': 'none'}" field="name" [width]="30">
+      </kendo-grid-column>
+      <kendo-grid-column [headerStyle]="{'display': 'none'}" [width]="10">
+        <ng-template kendoGridCellTemplate>
+          <a href="#"><span class="la la-trash-o" style="font-size: 29px"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#"><span class="la la-edit" style="font-size: 29px"></span></a>
+        </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-checkbox-column [headerStyle]="{'display': 'none'}" showSelectAll="true" [width]="5">
+      </kendo-grid-checkbox-column>
+    </kendo-grid>
+  </div>
+
+  <div class="modal-footer asset-modal-footer">
+
+  </div>
+</div>

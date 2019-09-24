@@ -1,0 +1,11 @@
+<!-- <p>
+  media-video works!
+</p> -->
+<div class="video" *ngIf="details.videoDetail?.videoSrc">
+  <video controls class="videoWidth" (click)="toggleVideo()" #videoPlayer>
+      <source src="{{details.videoDetail.videoSrc}}" type="video/mp4"  />
+      Browser not supported
+  </video>
+</div>
+
+<!-- {{details.videoDetail.videoSrc}} -->

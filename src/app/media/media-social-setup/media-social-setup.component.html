@@ -1,0 +1,158 @@
+
+
+<h5>SetUp Social</h5>
+
+<form [formGroup]="socialSetup">
+
+  <!-- Twitter -->
+  <div class="row">
+    <div class="col-md-3">
+      <label for="">Twitter</label>
+      <div class="custom-control custom-switch mt-1">
+        <input type="checkbox" formControlName="twitter" class="custom-control-input" id="twitter" name="twitter" (change)="saveEmit()">
+        <label class="custom-control-label" for="twitter"></label>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <label class="pull-right text-grey" for="">http://www.twitter.com</label>
+      <span class="icondisplay-input fa fa-2x fa-twitter pl-2"></span>
+      <input type="text" formControlName="twitterUrl" class="form-control pl-5 " placeholder="Handle goes here " (focusout)="saveEmit()">
+    </div>
+  </div>
+
+  <!-- Instagram -->
+  <div class="row">
+    <div class="col-md-3">
+      <label for="">Instagram</label>
+      <div class="custom-control custom-switch mt-1">
+        <input type="checkbox" formControlName="instagram" class="custom-control-input" id="instagram" name="instagram"  (change)="saveEmit()">
+        <label class="custom-control-label" for="instagram"></label>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <label class="pull-right text-grey" for="">http://www.instagram.com</label>
+      <span class="icondisplay-input fa fa-2x fa-instagram pl-2"></span>
+      <input type="text" formControlName="instagramUrl" class="form-control pl-5 " placeholder="Handle goes here" (focusout)="saveEmit()">
+    </div>
+  </div>
+
+  <!-- Facebook -->
+  <div class="row">
+    <div class="col-md-3">
+      <label for="">Facebook</label>
+      <div class="custom-control custom-switch mt-1">
+        <input type="checkbox" formControlName="Facebook" class="custom-control-input" id="Facebook" name="example"  (change)="saveEmit()">
+        <label class="custom-control-label" for="Facebook"></label>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <label class="pull-right text-grey" for="">http://www.Facebook.com</label>
+      <span class="icondisplay-input fa fa-2x fa-facebook pl-2"></span>
+      <input type="text" formControlName="FacebookUrl" class="form-control pl-5 " placeholder="Handle goes here" (focusout)="saveEmit()"> 
+    </div>
+  </div>
+
+  <!-- Website -->
+  <div class="row">
+    <div class="col-md-3">
+      <label for="">Website</label>
+      <div class="custom-control custom-switch mt-1">
+        <input type="checkbox" formControlName="Website" class="custom-control-input" id="Website" name="example"  (change)="saveEmit()">
+        <label class="custom-control-label" for="Website"></label>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <label class="pull-right text-grey" for="">http://www.website.com</label>
+      <span class="icondisplay-input fa fa-2x fa-link pl-2"></span>
+      <input type="text" formControlName="WebsiteUrl" class="form-control pl-5 " placeholder="http://" (focusout)="saveEmit()">
+    </div>
+  </div>
+
+  <div class="row">
+
+    <label class="col-md-12" for="">Show Contact</label>
+
+
+    <div class="col-md-3">
+
+      <div class="custom-control custom-switch mt-1">
+        <input type="checkbox" [(ngModel)]="isShowContact"  (change)="checkShowContact(isShowContact? 'true':'false')"
+          [ngModelOptions]="{standalone: true}" class="custom-control-input" id="contact" name="example">
+        <label class="custom-control-label" for="contact"></label>
+      </div>
+    </div>
+    <div class="col-md-9" *ngIf="isShowContact">
+
+      <div class="row">
+        <div class="col-md-12 mb-2">
+          <span class="icondisplay-input-20 fa fa-2x fa-address-book-o pl-2"></span>
+          <input type="text" formControlName="contact_firstNameLastName" class="form-control pl-5 "
+            placeholder="First & Last Name" (focusout)="saveEmit()">
+        </div>
+        <div class="col-md-12 mb-2">
+          <span class="icondisplay-input-20 fa fa-2x fa-phone pl-2"></span>
+          <input type="text" formControlName="contact_PhoneNumber" class="form-control pl-5 "
+            placeholder="Phone Number" (focusout)="saveEmit()">
+        </div>
+
+        <div class="col-md-12 mb-2">
+          <span class="icondisplay-input-20 fa fa-2x fa-paper-plane-o pl-2"></span>
+          <input type="text" formControlName="contact_EmailAddress" (focusout)="saveEmit()"  class="form-control pl-5 "
+            placeholder="EmailAddress">
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="row" *ngIf="isShowContact">
+
+    <label class="col-md-12" for="">Show Address</label>
+
+    <div class="col-md-3">
+
+      <div class="custom-control custom-switch mt-1">
+        <input type="checkbox" [(ngModel)]="isShowAddress" (change)="checkShowAddress(isShowAddress? 'true':'false')"
+          [ngModelOptions]="{standalone: true}" class="custom-control-input" id="address" name="example">
+        <label class="custom-control-label" for="address"></label>
+      </div>
+    </div>
+    <div class="col-md-9" *ngIf="isShowAddress">
+      <div class="row">
+        <div class="col-md-12 mb-2">
+          <span class="icondisplay-input-20 fa fa-2x fa-address-book-o pl-2"></span>
+          <input type="text" formControlName="Address1" class="form-control pl-5 " placeholder="Address1" (focusout)="saveEmit()">
+        </div>
+
+        <div class="col-md-12 mb-2">
+          <span class="icondisplay-input-20 fa fa-2x fa-address-book-o pl-2"></span>
+          <input type="text" formControlName="Address2" class="form-control pl-5 " placeholder="Address2" (focusout)="saveEmit()">
+        </div>
+
+        <div class="col-md-12 mb-2">
+          <select name="" id="" formControlName="city" placeholder="City" class="form-control pl-5 " (focusout)="saveEmit()">
+            <option value=" ">City</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <select name="" id="" formControlName="state" placeholder="State" class="form-control pl-5"  (focusout)="saveEmit()">
+            <option value=" ">State</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <select name="" id="" formControlName="zipcode" placeholder="Zipcode" class="form-control pl-5 " (focusout)="saveEmit()"> </select>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+</form>

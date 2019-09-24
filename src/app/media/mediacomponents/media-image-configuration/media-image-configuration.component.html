@@ -1,0 +1,62 @@
+
+
+<div class="col-md-12 upload-audio-section">
+  <input type="file" style="display: none" (change)="selectMediaMailVideo($event)" #Img>
+  <div class="text-lightgreen choose-audio " (click)="Img.click()"> <span class="fa fa-2x fa-cloud-upload"></span>
+    Choose Image</div>
+  <div class="or-drag-drop-audio">or Drag & Drop Image File Here</div>
+</div>
+
+
+
+
+
+
+<!-- //grid  -->
+<div>
+
+  <div > 
+        
+    <input class=" col-md-12 fontawsome-font form-control bg-border-black " placeholder="Search Image Title  &#xF002;" (input)="searchInput($event.target.value)" />
+    
+</div>
+
+  <kendo-grid [data]="gridData" [selectable]="selectableSettings"
+    class="table table-striped table-dark table-borderless text-12" [height]="410">
+
+    <kendo-grid-column title="" width="60">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <div class="la la-2x la-image"></div>
+      </ng-template>
+
+    </kendo-grid-column>
+    <kendo-grid-column title="" width="240">
+      <ng-template kendoGridCellTemplate let-dataItem>
+
+        <div>
+          
+          <div class="float-left">
+            <div>{{dataItem.Name}} </div>
+            <div>{{dataItem.type}} </div>
+          </div>
+
+        </div>
+
+
+
+      </ng-template>
+
+    </kendo-grid-column>
+    <kendo-grid-checkbox-column>
+      <ng-template kendoGridCellTemplate let-idx="rowIndex" let-dataItem>
+        <div class=" float-left checkbox checkbox-success  ">
+          <input [kendoGridSelectionCheckbox]="idx" id="{{dataItem.id}}" class="styled"
+            (change)="selectedimage($event,dataItem)" />
+          <label for="{{dataItem.id}}"> </label>
+        </div>
+      </ng-template>
+    </kendo-grid-checkbox-column>
+
+
+  </kendo-grid>
+</div>

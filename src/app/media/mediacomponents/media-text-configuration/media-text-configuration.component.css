@@ -1,0 +1,14 @@
+.second-toolbar{
+    display:none !important ;
+    visibility: hidden;
+}
+
+
+:host >>> #editor{
+    min-height: 150px !important;
+
+}
+
+:host>>> .ck-editor__editable {
+    min-height: 150px !important;
+}

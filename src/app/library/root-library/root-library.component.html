@@ -1,0 +1,85 @@
+<div class="row m-0 pad-20">
+
+  <div class=" col-md-12 musiclist bg-media-black text-white">
+    <h2 class=""> <i class="la la-folder"></i> Library</h2>
+  </div>
+
+  <div class="row col-md-4 pad-20">
+    <div class="col-md-12">
+      <div class="input-container">
+        <input type="text" class="form-control inline-search" placeholder="Search">
+        <h3><i class="la la-angle-down text-white"></i></h3>
+        <h3><i class="la la-search text-white"></i></h3>
+      </div>
+      <p class="form-text text-muted">Search for images, audio & video.</p>
+    </div>
+  </div>
+
+  <div class="row col-md-4 pad-20">
+  </div>
+
+  <div class="row col-md-4 pad-20">
+    <div class="col-md-12 add-new-middle">
+      <a class="nav-link dropdown-toggle add-new" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> <i class="la la-plus-circle"></i> Add New </a>
+      
+      <div class="dropdown-menu bg-lightgreen">
+        <a class="dropdown-item text-black asset-dropdown" (click)="openNewAssetModal()"><i class="{{selectedTab.icon}} dropdown-icon"></i>{{selectedTab.option}}</a>
+        <a class="dropdown-item text-black asset-dropdown" (click)="openNewFolderModal()"><i class="la la-folder dropdown-icon"></i>FOLDER</a>
+      </div>
+    
+    </div>
+  </div>
+
+  <div class="col-md-12" *ngIf="!folderOn">
+    <h3 class="root-library"> <i class="la la-folder-open"></i>Root Library</h3>
+  </div>
+
+  <div class="col-md-11" *ngIf="!folderOn  ">
+    <tabset>
+      <tab *ngFor="let tab of tabs" (selectTab)="onSelectTab(tab)" heading="{{tab.tabName}}"> 
+
+        <div class="loading-spinner" *ngIf="isloading">
+          <app-loader></app-loader>
+          </div>
+
+        <div *ngIf="(!tabOn && !isloading)" class="container grid-container">
+            <div class="row" *ngFor="let asset of assets">
+            <div class="col-md-4 asset-content">
+              <h1><i class="la la-folder asset-icon" *ngIf="asset.folder_name" (click)="viewFolder(asset.id)"></i></h1>
+
+              <div *ngIf="asset.AssetName">
+                <h1><i class="la la-music asset-icon" *ngIf="asset.mime_content_type.startsWith('audio/')" (click)="playAudio(asset)"></i></h1>
+                <h1><i class="la la-file-video-o asset-icon" *ngIf="asset.mime_content_type.startsWith('video/')" (click)="displayAsset(asset)"></i>
+                </h1>
+                <h1><i class="la la-file-image-o asset-icon" *ngIf="asset.mime_content_type.startsWith('image/')" (click)="displayAsset(asset)"></i>
+                </h1>
+                <h1><i class="la la-file-pdf-o asset-icon" *ngIf="asset.mime_content_type === 'application/pdf'" (click)="displayAsset(asset)"></i>
+                </h1>
+              </div>
+
+              <h3 *ngIf="asset.folder_name" class="folder-name">{{asset.folder_name}}</h3>
+              <p *ngIf="asset.folder_name">3 Files</p>
+              <h3 *ngIf="asset.AssetName" class="asset-name">{{asset.AssetName}}</h3>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="container" *ngIf="(tabOn && !isloading)">
+          <app-library-grid [gridData]="gridData"></app-library-grid>
+        </div>
+
+        <div *ngIf="(!tabOn && !isloading)">
+          <pagination (pageChanged)="pageChanged($event)" [boundaryLinks]="showBoundaryLinks" [maxSize]="10"
+            [itemsPerPage]="16" [totalItems]="data.length">
+          </pagination>
+        </div>
+
+      </tab>
+    </tabset>
+
+  </div>
+  <div *ngIf="folderOn">
+    <app-library-folder [folderId]="folderId" (sharedVarChange)="hideThisChild($event)"></app-library-folder>
+  </div>
+</div>

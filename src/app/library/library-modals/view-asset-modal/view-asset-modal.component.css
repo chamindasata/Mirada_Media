@@ -1,0 +1,47 @@
+.asset-title {
+    text-align: center;
+    color: white;
+    font-family: Montserrat;
+  }
+  
+  .image-body {
+    text-align: center;
+  }
+  
+  .asset-image {
+    width: 100%;
+  }
+  
+  .asset-modal-header {
+    border: none !important;
+  }
+  
+  .asset-modal-footer {
+    border: none !important;
+  }
+  
+  .asset-title {
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-weight: lighter;
+  }
+  
+  .asset-text {
+    color: white;
+  }
+  
+  .close {
+      color: white;
+      font-family: Montserrat;
+      font-weight: lighter;
+      font-size: 63px;
+      text-shadow: none;
+    }
+
+  .video-body {
+    align-content: center;
+  }
+
+  .asset-video {
+    width: 100%;
+  }

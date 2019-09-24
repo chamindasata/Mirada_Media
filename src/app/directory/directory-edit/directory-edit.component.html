@@ -1,0 +1,123 @@
+<div class="row m-0 pad-20">
+    <div class="col-md-12">
+  
+    <div class="row">
+        <div class="col-md-12">
+          <div class="input-container">
+            <h4 class="rectangle-fristname white">&nbsp;&nbsp;<i class="la la-user"> </i>Ronny Davidson, AKA Ronald</h4>&nbsp;&nbsp;
+            <button class="rectangle-edit"><i class="la la-edit"></i>&nbsp; &nbsp; Edit</button>&nbsp;
+            <button class="rectangle-close"><i class="la la-close"></i> &nbsp; Close</button>
+         </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row ">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="label-mp" for="">Company</label><br>
+                <span class="label-data">Angry Monker Entertainment</span>
+            </div>
+            <div class="form-group">
+                <label class="label-mp" for="">Mobile</label><br>
+                <span class="label-data">(201)555-555</span>
+            </div>
+            <div class="form-group">
+                <label class="label-mp" for="">Email Address</label><br>
+                <span class="label-data">wolf.nettie@royal.biz</span>
+            </div>
+            <div class="form-group">
+                <label class="label-mp" for="">Mailing Address</label><br>
+                <span class="label-data">211 Union Street, 203<br>Nashville, TN 37203</span>
+            </div>
+            <div class="form-group">
+                <label class="label-mp" for="">Lists</label><br>
+                <span class="label-data">Red Hat Society<br>Best of 2018<br> Christmas Parade</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+                <label class="label-mp" for="">Activity</label><br>
+            <section id="tabs">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-xs-12 ">
+                          <nav>
+                            <div class="nav nav-tabs flex-column flex-sm-row justify-content-center" id="nav-tab" role="tablist">
+                              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">MediaMail Sent</a>
+                              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Audio Listened to</a>
+                              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Videos Watched</a>
+                               
+                            </div>
+                          </nav>
+                          <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <kendo-grid
+                                    [kendoGridBinding]="gridData"
+                                    [pageSize]="5"
+                                    [pageable]="false"
+                                    [sortable]="true"
+                                    [filterable]="false"
+                                    [groupable]="false"
+                                    [height]="510"
+                                    [selectable]="true"
+                                    [selectable]="selectableSettings"
+                                    >
+                                    <kendo-grid-column field="Sent on" [width]="180"></kendo-grid-column>
+                                    <kendo-grid-column field="MediaMail" [width]="180"></kendo-grid-column>
+                                 
+                                </kendo-grid>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    <kendo-grid
+                                    [kendoGridBinding]="gridData"
+                                    [pageSize]="5"
+                                    [pageable]="false"
+                                    [sortable]="true"
+                                    [filterable]="false"
+                                    [groupable]="false"
+                                    [height]="510"
+                                    [selectable]="true"
+                                    [selectable]="selectableSettings"
+                                    >
+                                    <kendo-grid-column field="Sent on" [width]="180"></kendo-grid-column>
+                                    <kendo-grid-column field="MediaMail" [width]="180"></kendo-grid-column>
+                                 
+                                </kendo-grid>
+                      
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                    <kendo-grid
+                                    [kendoGridBinding]="gridData"
+                                    [pageSize]="5"
+                                    [pageable]="false"
+                                    [sortable]="true"
+                                    [filterable]="false"
+                                    [groupable]="false"
+                                    [height]="510"
+                                    [selectable]="true"
+                                    [selectable]="selectableSettings"
+                                    >
+                                    <kendo-grid-column field="Sent on" [width]="180"></kendo-grid-column>
+                                    <kendo-grid-column field="MediaMail" [width]="180"></kendo-grid-column>
+                                 
+                                </kendo-grid>
+                           
+              
+                            </div>
+                          </div>
+                        
+                        </div>
+                      </div>
+                </div>
+            </section>
+
+        </div>
+     
+    </div>
+   
+  
+  
+    </div>
+  </div>

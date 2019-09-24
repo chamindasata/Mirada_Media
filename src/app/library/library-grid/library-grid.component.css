@@ -1,0 +1,26 @@
+.k-grid {
+    height: auto !important;
+}
+
+.k-grid tr.even { background-color: #333333; }
+.k-grid tr.odd { background-color: #282828; }
+
+.k-grid tr.even .col-icon { background-color: #414141;}
+.k-grid tr.odd .col-icon { background-color: #333333;}
+
+.k-grid td {
+  border: none;
+}
+
+.grid-icon{
+  font-size: 180%; 
+  opacity: 0.2;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+  overflow-y: hidden;
+  overflow-x:hidden;
+  height: max-content;
+}

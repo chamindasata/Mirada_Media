@@ -1,0 +1,53 @@
+.current-track__actions {
+    width: 40%;
+    display: flex;
+    margin: auto;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.cover-musicplayer{
+    width: 55%;
+    /* border: 1px solid blue; */
+    
+    margin-left: 10%
+}
+.current-track__progress {
+    width: 100%;
+    padding: 0 30px;
+    color: #aaaaaa;
+    font-size: 11px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.current-track__options .controls .volume {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.current-track__options {
+    width: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: 5%;
+}
+
+
+
+.current-track__progress  .mat-slider-horizontal {
+    height: 38px;
+    width: 100%;
+}
+
+.mat-slider-horizontal {
+    height: 48px;
+    min-width: 108px;
+}

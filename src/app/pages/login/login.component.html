@@ -1,0 +1,49 @@
+
+
+<div class="col-md-3 col-sm-8 m-auto login-compo-possition">
+  <div class="login-card-light p-3 shadow-lg rounded">
+      <div class="pt-3">
+          <h2 class="text-lightgreen text-center font-weight-bold">Sign In </h2>
+      </div>
+
+      <form class="mt-5" [formGroup]="loginForm">
+          <div class="form-group">
+              <input type="email" formControlName="userName"  class="form-control form-control-md"   placeholder="Email Id">
+          </div>
+
+          <div class="form-group">
+              <input type="password"  formControlName="password" class="form-control form-control-md" placeholder="Password">
+          </div>
+          <app-loader *ngIf="isLoader"></app-loader>
+          <!-- <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="rememberCheckBox">
+              <label class="form-check-label text-dark" for="rememberCheckBox">Remember me?</label>
+          </div> -->
+          <div class="text-danger col-12" *ngIf="loginForm.get('userName').touched && loginForm.get('userName').hasError('required')">
+          
+            * Username Required
+          </div>
+          <div class="text-danger col-12" *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">
+          * Password Required
+          </div>
+<div class="text-danger col-12" >
+    {{errorMsg}}
+</div>
+
+          <div class="mt-2">
+              <button class="btn btn-sm btn-prime col" (click)="login(loginForm.value)">   Login </button>
+          </div>
+
+          <div class="text-center mt-2">
+              <a href="#">Forgot Password?</a>
+          </div>
+          
+          <div class="mt-5">
+              <p class="text-center">
+                  Don't have an account?
+                  <a href="#">Click here to register</a>
+              </p>
+          </div>
+      </form>
+  </div>
+</div>

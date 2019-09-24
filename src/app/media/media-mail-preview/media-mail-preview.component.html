@@ -1,0 +1,125 @@
+
+<div class="container bg-white">
+
+
+  <div class="row">
+    <div class="col-md-12 media-cover-img background-grey"
+      [ngStyle]="{'background-image': 'url(' + pitchImageUrl + ')'}">
+      <div class="text-center text-white mediamail-cover">
+        <h1 class=" text-white"> {{mediaConfigureSetup?.title}} </h1>
+        <!-- <h1 class=" text-white"> {{mediaMailTitle}} {{this.setupDetail?.mediaConfigureSetup?.title}}</h1> -->
+        <h2 class=" text-grey"> {{mediaConfigureSetup?.projectName}} </h2>
+
+        <!-- <input type="file" style="display: none" (change)="selectMediaMailcover($event)" #pitchImg>
+        <div class="text-blue font-weight-bold " (click)="pitchImg.click()"> 
+          <span  class="la la-2x la-cloud-upload mt-3"></span>
+           <span class="fontsize-1rem pl-2">Choose Pitch Image</span>
+        </div> -->
+
+        <div class="pt-2" *ngIf="mediaSocialSetup">
+          <a *ngIf="mediaSocialSetup?.twitter" href={{mediaSocialSetup?.twitterUrl}} target="new"> <span
+              class="la la-2x la-twitter pl-2"></span></a>
+          <a *ngIf="mediaSocialSetup?.instagram" href={{mediaSocialSetup?.instagramUrl}} target="new"> <span
+              class="la la-2x  la-instagram"></span></a>
+          <a *ngIf="mediaSocialSetup?.Facebook" href={{mediaSocialSetup?.FacebookUrl}} target="new"> <span
+              class="la la-2x  la-facebook"></span> </a>
+          <a *ngIf="mediaSocialSetup?.Website" href={{mediaSocialSetup?.WebsiteUrl}} target="new"> <span
+              class="la la-2x  la-link"></span></a>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <div class="row">
+    <div class="col-md-6">
+
+      <ng-container *ngComponentOutlet="dummyComontnent"></ng-container>
+      dafdsa
+    </div>
+
+
+
+    <div class="col-md-6"></div>
+
+  </div> -->
+
+  <div class="row">
+
+    <div *ngFor="let item of  mediaPreview.templateComponents;  let i = index" class="{{item.column}} mt-2 pt-2"
+      [ngClass]="{'media-colum': true}">
+      <!-- <div *ngIf="item.column=='col-md-6' &&  isOdd(i) "> -->
+<div *ngIf="editSectionEnable">
+      <div *ngIf="item.column=='col-md-6'" class="fieldSizeSetting">
+        <div (click)="columnMinus(item,i)">  <i class="la la-2x la-plus-square-o"></i> </div>
+      </div>
+
+      <div *ngIf="item.column=='col-md-12' " class="fieldSizeSetting">
+        <div (click)="columnPlus(item,i)">  <i class="la la-2x  la-minus-square-o"></i> </div>
+      </div>
+    </div>
+
+      <div class="border-dark-shadow-component">
+
+        <div class="media-edit-component" *ngIf="editSectionEnable" (click)="componentChange(item,i)"> <i class="fa fa-edit"></i> </div>
+
+        <div *ngIf="item.name==='textComponent'">
+          <app-media-text [details]=item.details></app-media-text>
+        </div>
+
+        <div *ngIf="item.name === 'audioComponent' ">
+          <app-media-audio [details]=item.details></app-media-audio>
+        </div>
+
+        <div *ngIf="item.name === 'videoComponent' ">
+          <app-media-video [details]=item.details></app-media-video>
+        </div>
+
+        <div *ngIf="item.name === 'imageComponent' ">
+          <app-media-image [details]=item.details></app-media-image>
+        </div>
+
+        <div *ngIf="item.name === 'lineupComponent' ">
+          <app-media-lineup></app-media-lineup>
+        </div>
+
+        <div *ngIf="item.name === 'dummyComponent' ">
+          <app-media-dummy></app-media-dummy>
+        </div>
+
+        <!-- <ng-container *ngComponentOutlet="item.componentName"></ng-container> -->
+        <!-- {{item.text}}
+      {{item.details.textValue}}
+      <button (click)="componentChange(item,i)">change</button> -->
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="row" *ngIf="mediaSocialSetup?.isShowContact">
+    <div class="col-md-12 bg-light p-2 pb-3">
+      <h3>Contact {{mediaSocialSetup?.contact_firstNameLastName}}</h3>
+      <h5 class="contact-details"> <span class="la la-phone"></span> {{mediaSocialSetup?. contact_PhoneNumber}} </h5>
+      <h5 class="contact-details"> <span class="la  la-paper-plane-o"></span>
+        {{mediaSocialSetup?. contact_EmailAddress}} </h5>
+      <h5 class="contact-details"> <span class="la la-map-marker"></span> <span *ngIf="mediaSocialSetup?.isShowAddress">
+          {{mediaSocialSetup?.Address1 +" "+ mediaSocialSetup?.Address2 +" "+ mediaSocialSetup?.city +" "+ mediaSocialSetup?.state  +" "+ mediaSocialSetup?.zipcode  }}
+        </span> </h5>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

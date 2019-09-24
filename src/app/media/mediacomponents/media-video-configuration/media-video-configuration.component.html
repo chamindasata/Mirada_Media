@@ -1,0 +1,122 @@
+
+
+<div class="col-md-12 upload-audio-section">
+  <input type="file" style="display: none" (change)="selectMediaMailVideo($event)" #videoImg>
+  <div class="text-lightgreen choose-audio " (click)="videoImg.click()"> <span class="fa fa-2x fa-cloud-upload"></span>
+    Choose Video</div>
+  <div class="or-drag-drop-audio">or Drag & Drop Video File Here</div>
+</div>
+
+
+<div class="checkbox checkbox-success mt-4 ">
+  <input id="checkbox3" class="styled" type="checkbox">
+  <label for="checkbox3">
+    Allow Download
+  </label>
+</div>
+
+<!-- filter -->
+<!-- <div class="col-md-12">
+  <div class="row mt-3 mb-3">
+    <div class="col-md-4 border-filter-sec">
+      <label for="" class="border-top-label">Search By</label>
+      <select class="form-control bg-border-black  mt-4" name="" id="">
+        <option value="">select</option>
+      </select>
+    </div>
+    <div class="col-md-4   border-filter-sec">
+      <label class="border-top-label" for="">Catalog Type</label>
+      <select class="form-control bg-border-black mt-4" name="" id="">
+        <option value="">select</option>
+      </select>
+    </div>
+    <div class="col-md-4  border-filter-sec">
+      <label class="border-top-label" for="">File Type</label>
+      <select class="form-control bg-border-black mt-4" name="" id="">
+        <option value="">select</option>
+      </select>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- //grid  -->
+<div>
+
+    <div > 
+        
+        <input class=" col-md-12 fontawsome-font form-control bg-border-black " placeholder="Search Video Title  &#xF002;" (input)="searchInput($event.target.value)" />
+        
+    </div>
+    <!-- [selectable]="selectableSettings" [kendoGridSelectBy]="mySelectionKey()" -->
+  <kendo-grid [data]="gridData" [selectable]="selectableSettings"
+
+ 
+    class="table table-striped table-dark table-borderless text-12" [height]="410">
+    <kendo-grid-column title="" width="60">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <div class="la la-2x la-file-video-o"></div>
+      </ng-template>
+
+    </kendo-grid-column>
+    <kendo-grid-column title="" width="240">
+      <ng-template kendoGridCellTemplate let-dataItem>
+
+        <div>
+          <div class="float-left  track-play"><i class="ion-ios-play play la-2x"></i></div>
+          <div class="float-left">
+            <div>{{dataItem.Name}} </div>
+            <div>{{dataItem.type}} </div>
+          </div>
+
+        </div>
+
+
+
+      </ng-template>
+
+    </kendo-grid-column>
+    <kendo-grid-checkbox-column> 
+        <ng-template kendoGridCellTemplate let-idx="rowIndex" let-dataItem>
+            <div class=" float-left checkbox checkbox-success  ">
+             <input [kendoGridSelectionCheckbox]="idx" id="{{dataItem.id}}" class="styled" (change)="selectedVideo($event,dataItem)" />
+             <label for="{{dataItem.id}}"> </label>
+            </div>
+          </ng-template>
+        <!-- <ng-template kendoGridCellTemplate let-dataItem>
+          
+            <span class="fa fa-edit float-left mt-2"></span>
+           
+            <div class=" float-left checkbox checkbox-success  ">
+                    <input id="{{dataItem.id}}" class="styled" type="checkbox"  (change)="selectedVideo($event,dataItem)">
+                    <label for="{{dataItem.id}}"> </label>
+                </div>
+        </ng-template> -->
+
+    </kendo-grid-checkbox-column>
+
+    <!-- <kendo-grid-column field="SupplierID" title=""   width="120">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          
+            <span class="fa fa-edit float-left mt-2"></span>
+           
+            <div class=" float-left checkbox checkbox-success  ">
+                    <input id="{{dataItem.id}}" class="styled" type="checkbox"  (change)="selectedVideo($event,dataItem)">
+                    <label for="{{dataItem.id}}"> </label>
+                </div>
+        </ng-template>
+    </kendo-grid-column> -->
+
+    <!-- <kendo-grid-column field="SupplierID" title=""   width="120">
+            <ng-template kendoGridCellTemplate let-dataItem>
+              
+                <span class="fa fa-edit float-left mt-2"></span>
+               
+                <div class=" float-left checkbox checkbox-success  ">
+                        <input id="{{dataItem.id}}" class="styled" type="checkbox"  (change)="selectedVideo($event,dataItem)">
+                        <label for="{{dataItem.id}}"> </label>
+                    </div>
+            </ng-template>
+        </kendo-grid-column> -->
+  </kendo-grid>
+</div>

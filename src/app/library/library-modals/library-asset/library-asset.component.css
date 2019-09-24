@@ -1,0 +1,129 @@
+.asset-modal-header {
+    border: none !important;
+  }
+  
+  .asset-modal-footer {
+    border: none !important;
+  }
+  .modal-title {
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-weight: lighter;
+  }
+  
+  .modal-text {
+    color: white;
+  }
+  .modal-col-left{
+    width: 50%;
+  }
+  
+  .modal-col-right{
+    width: 50%;
+    margin-top: 2%;
+  }
+  
+  .create-mediamail-btn{
+    color: #28DCCF;
+    background-color: #174548;
+    width: 50%;
+    border-color: #174548;
+    margin-right: 3%;
+  }
+  
+  .add-library-btn {
+    color: black;
+    background-color: #28DCCF;
+    width: 45%;
+    border-color: #28DCCF
+  }
+  
+  .new-asset-row {
+    margin: 0px;
+  }
+  
+  .new-asset-second-row {
+    margin: 0px;
+    text-align: center;
+  }
+  
+  .upload-asset-section{
+    border: 1px dashed #979797;
+    border-radius: 5px;
+    min-height: 200px;
+    max-width: 95%;
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+  
+  .choose-audio {	    
+    margin-top: 10%;	
+    font-family: Montserrat;	
+    font-size: 16px;	
+    font-weight: 500;	
+    letter-spacing: 0.38px;	
+    line-height: 28px;	
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .or-drag-drop-audio {		
+    color: #B3B3B3;	
+    font-family: Montserrat;	
+    font-size: 16px;	
+    font-weight: 500;	
+    letter-spacing: 0.38px;	
+    line-height: 28px;	
+    text-align: center;
+  }
+  
+  .checkbox-allow-download {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .modal-grid {
+    width: 96%;
+    margin-left: 2%;
+  }
+  
+  .k-grid {
+    height: auto !important;
+  }
+  
+  .k-grid tr.even { background-color: #333333; }
+  .k-grid tr.odd { background-color: #282828; }
+  
+  .k-grid tr.even .col-icon { background-color: #414141;}
+  .k-grid tr.odd .col-icon { background-color: #333333;}
+  
+  .k-grid td {
+  border: none;
+  }
+  
+  .k-grid-header {
+    background: transparent;
+  }
+  
+  .grid-icon{
+    font-size: 180%; 
+    opacity: 0.2;
+    text-align: center;
+  }
+  
+  .close {
+    color: white;
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 63px;
+    text-shadow: none;
+  }
+
+  .asset-folder-dropdown:focus {
+    border: transparent;
+    box-shadow: none;
+}
+
+.loading-spinner {
+  height: auto;
+}

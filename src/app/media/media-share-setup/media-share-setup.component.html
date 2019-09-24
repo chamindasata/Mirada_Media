@@ -1,0 +1,64 @@
+
+<h5>Share</h5>
+<form [formGroup]="mediaShareform">
+<div class="row">
+  <div class="col-md-12 mt-2 mb-2">
+    <input style="display: none" type="file"  (change)="onFileUpload($event)" #fileInput >
+    <button type="button" class="btn btn-outline-success-light" (click)="fileInput.click()"> <span class="fa fa-image"></span> Upload Custom Logo</button>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12 mt-3">
+    <label class="text-grey" for="">when do you want to send it ?</label>
+    <!-- <input type="text" formControlName="sendDate" class="form-control pl-5 "> -->
+    <input  formControlName="sendDate" class="form-control  " [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time" (focusout)="emitService()">
+    <owl-date-time #dt1></owl-date-time>
+    <span class="fa fa-calendar calendaricon-control"></span>
+  
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mt-3">
+    <label class="text-grey" for="">when should it deactivate?</label>
+   
+    <input  formControlName="deactivate" class="form-control " [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="Date Time" (focusout)="emitService()">
+    <owl-date-time #dt2></owl-date-time>
+    <span class="fa fa-calendar calendaricon-control"></span>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 mt-3">
+      <label class="text-grey" for="">From (Optional)</label>
+      <input type="text" formControlName="From" class="form-control " (focusout)="emitService()">
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12 mt-3">
+        <label class="text-grey" for="">Subject</label>
+        <input type="text" formControlName="Subject" class="form-control  " (focusout)="emitService()">
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mt-3">
+          <label class="text-grey " for="">Email Welcome Text</label>
+          <!-- <textarea formControlName="emailText" name="" id="" cols="30" rows="10" class="form-control " (focusout)="emitService()"></textarea> -->
+          <angular-editor  [(ngModel)]="emailText"  [ngModelOptions]="{standalone: true}" (ngModelChange)="emitService()"></angular-editor>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <label class="text-grey" for="">Email Signature</label>
+          <input type="text" formControlName="emailSignature" class="form-control  " (focusout)="emitService()">
+        </div>
+      </div>
+
+
+    </form>

@@ -1,0 +1,22 @@
+<div class="new-asset-modal">
+    <form #userlogin="ngForm" (ngSubmit)="onSubmit(userlogin.value)" >
+    <div class="modal-header asset-modal-header">
+      <h2 class="modal-title pull-left"><i class="la la-folder"></i> Add Folder</h2>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="row new-asset-row">
+      <div class="col modal-col-left">
+          <label class="label-mp" for="">Folder Name</label>
+      <input type="text" name="folderName" class="form-control folder-input" placeholder="Folder Name" ngModel>
+      </div>
+    </div>
+  
+    <div class="modal-footer asset-modal-footer">
+        <button  type="submit" value="submit" class="btn btn-primary save-playlist" (click)="bsModalRef.hide()">Save</button>
+    </div>
+    </form>
+  </div>
+  
+  

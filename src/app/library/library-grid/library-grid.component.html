@@ -1,0 +1,42 @@
+<kendo-grid [kendoGridBinding]="gridData" [pageSize]="10" [pageable]="true" [sortable]="true" [filterable]="false"
+  [groupable]="false" [height]="510" [selectable]="true" [selectable]="selectableSettings" [rowClass]="rowCallback">
+  <kendo-grid-column [width]="30" class="col-icon">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <div class="icon-div">
+        <a><span [innerHTML]="mediaTypelogo(dataItem)"></span></a>
+      </div>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column [width]="30">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <div>
+        <div *ngIf="dataItem.mime_content_type.startsWith('audio/')" class="track-play" (click)="playAudio(dataItem)"><i class="ion-ios-play play-btn"></i></div>
+        <div *ngIf="dataItem.mime_content_type.startsWith('video/')" class="track-play" (click)="displayAsset(dataItem)"><i class="ion-ios-play play-btn"></i></div>
+        <div *ngIf="dataItem.mime_content_type.startsWith('image/')" class="asset-view" (click)="displayAsset(dataItem)"><i class="la la-eye view-btn"></i></div>
+        <div *ngIf="dataItem.mime_content_type === 'application/pdf'" class="asset-view" (click)="displayAsset(dataItem)"><i class="la la-eye view-btn"></i></div>
+      </div>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="AssetName" [width]="100">
+    <ng-template kendoGridHeaderTemplate>
+      File Name <i class="la la-sort-amount-desc"></i>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column title="MediaMail" [width]="90">
+    <ng-template kendoGridHeaderTemplate>
+      MediaMail <i class="la la-sort-amount-desc"></i>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column title="Total Plays" [width]="150">
+    <ng-template kendoGridHeaderTemplate>
+      Total Plays <i class="la la-sort-amount-desc"></i>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column [width]="70">
+    <ng-template kendoGridCellTemplate>
+      <a href="#"><span class="la la-trash-o" style="font-size: 29px"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#"><span class="la la-edit" style="font-size: 29px"></span></a>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-checkbox-column showSelectAll="true" [width]="40"></kendo-grid-checkbox-column>
+</kendo-grid>

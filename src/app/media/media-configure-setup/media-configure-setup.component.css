@@ -1,0 +1,29 @@
+
+.float-right{
+    float: right;
+    }
+    .drag-media{
+        border: 1px dashed white;
+        padding: 10px;
+        border-radius: 5px;
+        margin:5px;
+        background-color: #333333;
+    }
+    .drag-media> span{
+        margin:10px;
+        /* float: left; */
+    }
+    .pt-b-10{
+        padding: 10px 0px 10px 0px;
+    }
+    
+    .pad-top-10{
+        padding-top:10px;
+    }
+
+    .ispublic_align{
+        margin-top: 35% !important;
+
+    }
+
+    

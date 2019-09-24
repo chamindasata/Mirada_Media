@@ -1,0 +1,11 @@
+.icondisplay-input{
+    position: absolute;
+    /* border: 1px solid blue; */
+    top: 50%;
+}
+
+.icondisplay-input-20{
+    position: absolute;
+    /* border: 1px solid blue; */
+    top: 20%;
+}

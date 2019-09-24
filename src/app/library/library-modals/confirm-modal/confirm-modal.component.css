@@ -1,0 +1,9 @@
+.confirmation-modal {
+    color: white;
+}
+
+.decline-btn {
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+}

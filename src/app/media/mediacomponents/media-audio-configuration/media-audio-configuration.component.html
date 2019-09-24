@@ -1,0 +1,96 @@
+
+<div class="col-md-12 upload-audio-section">
+    <input type="file" style="display: none" (change)="selectMediaMailAudioImg($event)" #audioImg>
+    <div class="text-lightgreen choose-audio " (click)="audioImg.click()"> <span class="fa fa-2x fa-cloud-upload"></span>  Choose Audio</div>
+  <div class="or-drag-drop-audio">or Drag & Drop Audio File Here</div>
+  </div> 
+
+
+<div class="checkbox checkbox-success mt-4 ">
+    <input id="checkbox3" class="styled" type="checkbox">
+    <label for="checkbox3">
+        Allow Download
+    </label>
+</div>
+
+<!-- filter -->
+<div class="col-md-12">
+<div class="row mt-3 mb-3">
+    <div class="col-md-4 border-filter-sec">
+        <label for="" class="border-top-label" >Search By</label>
+        <select class="form-control bg-border-black  mt-3 mb-1" name="" id="">
+            <option value="">select</option>
+        </select>
+    </div>
+    <div class="col-md-4   border-filter-sec">
+            <label class="border-top-label" for="">Catalog Type</label>
+            <select class="form-control bg-border-black mt-3 mb-1" name="" id="">
+                <option value="">select</option>
+            </select>
+    </div>
+    <div class="col-md-4  border-filter-sec">
+            <label class="border-top-label" for="">File Type</label>
+            <select class="form-control bg-border-black mt-3 mb-1" name="" id="">
+                <option value="">select</option>
+            </select>
+    </div>
+</div>
+</div>
+
+<!-- //grid  -->
+<div>
+    <div > 
+        
+            <input class=" col-md-9 fontawsome-font form-control bg-border-black zindex-99" placeholder="Search Song Title  &#xF002;" (input)="searchInput($event.target.value)" />
+            
+    </div>
+       
+
+
+    <kendo-grid [data]="gridData"      [selectable]="true"  class="table table-striped table-dark table-borderless text-12 m-top-40"  [height]="410">
+            <kendo-grid-column title="" width="60">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                           <div class="fa fa-2x fa-music"></div>
+                        </ng-template>
+
+                </kendo-grid-column>
+                <kendo-grid-column title="" width="240">
+                        <ng-template kendoGridCellTemplate let-dataItem>
+                           
+                              <div>
+                                    <div  class="float-left  track-play"><i  class="ion-ios-play play la-2x"></i></div>
+                                    <!-- <div class="float-left pr-1 fa fa-2x fa-music"></div> -->
+                                    <div class="float-left">   
+                                     <div>{{dataItem.Name}} </div>  
+                                     <div>{{dataItem.type}} </div>   
+                                    </div>
+ 
+                                </div>
+                                        
+                           
+                              
+                            </ng-template>
+    
+                    </kendo-grid-column>
+        <!-- <kendo-grid-column field="ProductID" title="ID" width="40">
+        </kendo-grid-column>
+        <kendo-grid-column field="ProductName" title="Name" width="250">
+        </kendo-grid-column>
+        -->
+        <!-- <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+        </kendo-grid-column> -->
+        <kendo-grid-column field="SupplierID" title=""   width="40">
+            <ng-template kendoGridCellTemplate let-dataItem>
+                <!-- <input type="checkbox" [checked]="dataItem.Discontinued" enabled/> -->
+                <span class=" la la-2x la-external-link  float-left mt-1"></span>
+               
+                <!-- <div class=" float-left checkbox checkbox-success  ">
+                        <input id="{{dataItem.id}}" class="styled" type="checkbox"  (change)="selectedMusic($event,dataItem)">
+                        <label for="{{dataItem.id}}"> </label>
+                    </div> -->
+            </ng-template>
+        </kendo-grid-column>
+
+        <kendo-grid-checkbox-column showSelectAll="true"  width="40"></kendo-grid-checkbox-column>
+    </kendo-grid>
+</div>

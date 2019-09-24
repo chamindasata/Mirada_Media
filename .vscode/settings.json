@@ -1,0 +1,21 @@
+// {
+//     "workbench.colorCustomizations": {
+//         "titleBar.activeBackground": "#1806dc",
+//         "titleBar.inactiveBackground": "#1806dc99",
+//         "titleBar.activeForeground": "#e7e7e7",
+//         "titleBar.inactiveForeground": "#e7e7e799",
+//         "statusBar.background": "#1806dc",
+//         "statusBarItem.hoverBackground": "#2f1cf9",
+//         "statusBar.foreground": "#e7e7e7"
+//     },
+//     "peacock.color": "#1806dc"
+// } 
+// {
+//     "workbench.colorCustomizations": {
+//         "titleBar.inactiveBackground": "#00b7c799",
+//         "titleBar.inactiveForeground": "#15202b99",
+//         "statusBar.background": "#00b7c7",
+//         "statusBarItem.hoverBackground": "#008894",
+//         "statusBar.foreground": "#15202b"
+//     }
+// }

@@ -1,0 +1,19 @@
+<div class="col-md-12 class-breadcrum" >
+  <ul>
+    <li><a class="root-library title" (click)="loadRootFolder()"><i class="la la-folder"></i>Root Library</a></li>
+    <li><a class="root-library"><i class="la la-angle-right"></i></a></li>
+    <li *ngIf="isloading"><a class="root-library"><i class="la la-folder-open"></i></a></li>
+    <li *ngIf="!isloading"><a class="root-library"><i class="la la-folder-open"></i>{{folderName}}</a></li>
+  </ul>
+</div>
+<div class="row folder-trash-div" *ngIf="!isloading">
+    <a class="folder-trash-icon" (click)="deleteFolder(confirm)">Delete Folder<span class="la la-trash-o" style="font-size: 29px"></span></a>
+</div>
+
+<div class="loading-spinner" *ngIf="isloading">
+  <app-loader></app-loader>
+</div>
+
+<div class="container" >
+  <app-library-grid *ngIf="!isloading" [gridData]="gridData"></app-library-grid>
+</div>

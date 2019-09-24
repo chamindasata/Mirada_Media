@@ -1,0 +1,90 @@
+.asset-modal-header {
+    border: none !important;
+  }
+  
+  .asset-modal-footer {
+    border: none !important;
+  }
+  .modal-title {
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-weight: lighter;
+  }
+  
+  .modal-text {
+    color: white;
+  }
+  .modal-col-left{
+    width: 50%;
+  }
+  
+  .modal-col-right{
+    width: 50%;
+    margin-top: 2%;
+  }
+  
+  .create-mediamail-btn{
+    color: #28DCCF;
+    background-color: #174548;
+    width: 50%;
+    border-color: #174548;
+    margin-right: 3%;
+  }
+  
+  .add-library-btn {
+    color: black;
+    background-color: #28DCCF;
+    width: 45%;
+    border-color: #28DCCF
+  }
+  
+  .new-asset-row {
+    margin: 0px;
+  }
+  
+  .new-asset-second-row {
+    margin: 0px;
+    text-align: center;
+  }
+  
+  .upload-asset-section{
+    border: 1px dashed #979797;
+    border-radius: 5px;
+    min-height: 200px;
+    max-width: 95%;
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+  
+  .close {
+    color: white;
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 63px;
+    text-shadow: none;
+  }
+
+  .playlist-search {
+    border: 0 !important;
+    outline: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #b6babb !important;
+    padding: 0;
+  }
+
+  .playlist-close {
+      background-color: #28DCCF;
+  }
+
+  .save-playlist {
+    color: black;
+    background-color: #28DCCF;
+    width: 15%;
+    border-color: #28DCCF
+  }
+  
+  .folder-input:focus {
+      border: transparent;
+      box-shadow: none;
+  }

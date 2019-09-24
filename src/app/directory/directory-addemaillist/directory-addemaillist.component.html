@@ -1,0 +1,122 @@
+<div class="row m-0 pad-20">
+    <div class="col-md-12">
+  
+    <div class="row">
+        <div class="col-md-12">
+            <label class="label-mp" for="">Email List Name</label>
+          <div class="input-container">
+            <input type="text" class="form-control rectangle-fristname" placeholder="Christmas in East" >&nbsp;&nbsp;
+            <button class="rectangle-cancle">Cancle</button>&nbsp;&nbsp;
+            <button class="rectangle-save">Save</button>
+          </div>
+        </div>
+    </div>
+    <br>
+     
+  
+    <div class="row">
+        <div class="row col-md-4 pad-20">
+  
+            <div class="col-md-12">
+             <div class="input-container">
+              <input type="text" class="form-control inline-search" placeholder="Add from Directory" (click)="addfromdirecoty()">
+              <h3><i class="la  la-search text-white"></i></h3>
+            </div>
+              <small class="form-text text-muted">Search-Names, Titles, Companies, etc.</small>
+            </div>
+        
+        </div>
+        <div class="row col-md-4 pad-20">
+         
+        </div>
+        <div class="row col-md-4 pad-20">
+        
+          <div class="col-md-12 add-new-middle">
+            <a routerLink="/directory/addnewcontact" class="add-new"> <i class="la la-plus-circle"></i> Add New </a>
+          </div>
+        
+        </div>
+  
+        
+    </div>
+   
+                      <kendo-grid
+                      [kendoGridBinding]="gridData"
+                      [pageSize]="10"
+                      [pageable]="true"
+                      [sortable]="true"
+                      [filterable]="false"
+                      [groupable]="false"
+                      [height]="510"
+                      [selectable]="true"
+                      [selectable]="selectableSettings"
+                      >
+                      <kendo-grid-column field="First Name" [width]="180"></kendo-grid-column>
+                      <kendo-grid-column field="Last Name" [width]="180"></kendo-grid-column>
+                      <kendo-grid-column field="Title" [width]="180"></kendo-grid-column>
+                      <kendo-grid-column field="Email" [width]="180"></kendo-grid-column>
+                      <kendo-grid-column field="Company" [width]="180"></kendo-grid-column>
+                      <kendo-grid-column  [width]="100">
+                        <ng-template kendoGridCellTemplate>
+                          <a href="#"><span class="la la-trash-o" style="font-size: 29px"></span></a>&nbsp;&nbsp;&nbsp;
+                          <a href="#"><span class="la la-edit" style="font-size: 29px"></span></a>
+                      </ng-template>
+                      </kendo-grid-column>
+                      <kendo-grid-checkbox-column showSelectAll="true" [width]="50"></kendo-grid-checkbox-column>
+                      </kendo-grid>
+  
+    </div>
+  </div>
+
+  <!-- modal in search -->
+  <div bsModal #addDirectoryEmail="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+  aria-labelledby="dialog-child-name">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" class="model-bg">
+      <div class="modal-body">
+        <div class="row">
+          <div class="row col-md-8 pad-20">
+    
+              <div class="col-md-12">
+               <div class="input-container">
+                <input type="text" class="form-control inline-search" placeholder="Add from Directory" (click)="addfromdirecoty()">
+                <h3><i class="la  la-search text-white"></i></h3>
+              </div>
+                <small class="form-text text-muted">Search-Names, Titles, Companies, etc.</small>
+              </div>
+
+          </div>
+          <div class="row col-md-4 pad-20">
+          
+            <button class="rectangle-cancle">Cancle</button>&nbsp;&nbsp;
+            <button class="rectangle-save">Add</button>
+          
+          </div>
+          <kendo-grid
+                      [kendoGridBinding]="gridData"
+                      [pageSize]="5"
+                      [pageable]="true"
+                    [filterable]="false"
+                    [groupable]="false"
+                    [height]="510"
+                    [selectable]="true"
+                    [selectable]="selectableSettings"
+                    [sort]="true"
+                    [sortable]="true"
+                      >
+                      <kendo-grid-column field="First Name" [width]="70"></kendo-grid-column>
+                      <kendo-grid-column field="Last Name" [width]="70"></kendo-grid-column>
+                      <kendo-grid-column field="Title" [width]="70"></kendo-grid-column>
+                      <kendo-grid-column field="Email" [width]="70"></kendo-grid-column>
+                      <kendo-grid-column field="Company" [width]="70"></kendo-grid-column>
+                      <kendo-grid-checkbox-column showSelectAll="true" [width]="50"></kendo-grid-checkbox-column>
+                      </kendo-grid>
+    
+          
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

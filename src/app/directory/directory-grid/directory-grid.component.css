@@ -1,0 +1,46 @@
+section {
+    padding: 5px 0;
+}
+
+section .section-title {
+    text-align: center;
+    /* color: #007b5e; */
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#tabs{
+	color: #eee;
+}
+#tabs h6.section-title{
+    color: #eee;
+}
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f3f3f3;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 4px solid #28dccf !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link.active{
+    color:  #4f81bb;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #eee;
+    font-size: 20px;
+}
+
+/* grid css */
+.k-grid-header th.k-header{
+     border-color: transparent; 
+    color: #bbbbbb;
+    background-color: #181818;
+}
+.right{
+    float: right;
+}

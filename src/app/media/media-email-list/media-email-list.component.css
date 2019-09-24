@@ -1,0 +1,46 @@
+.maillist-full{
+    min-height: 200vh;
+}
+
+:host>>> .form-control{
+       background-color: #F5F5F5 !important;
+       margin-bottom: 10px;
+       border: 1px solid #F5F5F5 !important;
+       color:#8b8b8b !important;
+       
+}
+.mail-cover-img{
+    /* min-height: 300px; */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mail-list{
+    list-style: none;
+}
+
+.mail-list li{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #F5F5F5;
+    border-top: 1px solid #F5F5F5;
+
+}
+
+.logo-mail{
+   /* height: 50px; */
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+#editor {
+    min-height: 150px !important;
+    
+}
+
+:host>>> .modal-content{
+    background-color: white !important;
+}

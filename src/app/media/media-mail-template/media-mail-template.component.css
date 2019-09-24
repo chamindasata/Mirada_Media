@@ -1,0 +1,110 @@
+.media-cover-img{
+    /* min-height: 300px; */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.background-grey{
+    background-color: #EBEBEB;
+
+}
+
+.mediamail-cover{
+    padding-top: 10%;
+    border:1px dotted grey;
+    padding-bottom: 10%;
+    /* background-color: #EBEBEB; */
+    margin: 10px;
+}
+
+.drag-media{
+    border: 1px dashed white;
+    padding: 10px;
+    border-radius: 5px;
+    margin:5px;
+    background-color: #333333;
+    color:white;
+}
+.drag-media> span{
+    margin:10px;
+    /* float: left; */
+}
+.pt-b-10{
+    padding: 10px 0px 10px 0px;
+}
+
+/* .border-dark-shadow-component:nth-of-type(odd){
+    margin-right: 5px;
+}
+.border-dark-shadow-component:nth-of-type(even){
+    margin-left: 5px;
+} */
+
+
+.border-dark-shadow-component{
+    padding:10px;
+    
+    margin-top: 5px;
+    /* border:1px solid grey; */
+    /* -webkit-box-shadow: -1px 3px 12px -1px rgba(0,0,0,0.42);
+-moz-box-shadow: -1px 3px 12px -1px rgba(0,0,0,0.42);
+box-shadow: -1px 3px 12px -1px rgba(0,0,0,0.42); */
+
+}
+
+.media-colum:nth-of-type(odd){
+    padding-right: 5px !important;
+}
+.media-colum:nth-of-type(even){
+    padding-left: 5px !important;
+}
+
+.media-colum{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.media-edit-component{
+    /* border:1px solid black; */
+    width: 30px ;
+    height: 30px;
+    position: absolute;
+right: 0;
+-webkit-box-shadow: -1px 3px 12px -1px rgba(0,0,0,0.42);
+-moz-box-shadow: -1px 3px 12px -1px rgba(0,0,0,0.42);
+box-shadow: -1px 3px 12px -1px rgba(0,0,0,0.42); 
+
+
+
+
+border-radius: 30px 0px 30px 30px;
+-moz-border-radius: 30px 0px 30px 30px;
+-webkit-border-radius: 30px 0px 30px 30px;
+border: 0px solid #000000;
+
+text-align: center;
+line-height: 3;
+cursor: pointer;
+z-index: 99;
+}
+
+.contact-details{
+    font-weight: bold;
+    padding: 10px;
+}
+a span{
+    color: white !important;
+    text-decoration: none;
+}
+
+.fieldSizeSetting{
+/* border: 1px solid blue; */
+position: absolute;
+z-index: 99;
+}
+
+:host >>> .modal{
+    overflow: scroll;
+    /* height: 90% !important; */
+}

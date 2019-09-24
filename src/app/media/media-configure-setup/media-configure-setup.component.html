@@ -1,0 +1,114 @@
+
+
+<div class="row">
+  <div class="col-md-12">
+      <h5 class="pt-b-10 font-weight-bold">Configure</h5>
+  </div>
+ 
+</div>
+
+
+<form [formGroup]="mediaConfigureForm">
+
+<div class="row mb-3">
+  <div class="col-md-6 col-sm-6">
+    <label class="label-mp"> Choose a theme </label>
+    <select formControlName="theme" class="form-control" >
+      <option value="" default>Choose a  Theme</option>
+      <option value="dsf">df</option>
+    </select>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6">
+
+    <div class="wrapper">
+        <div class="custom-control custom-switch mt-2 pull-right text-right">
+            <input type="checkbox" formControlName="isPublic" class="custom-control-input" id="isPublic" name="example">
+            <label class="custom-control-label" for="isPublic"></label>
+            public
+          </div>
+      <!-- <div class="switch_box box_1 float-right">
+        <input type="checkbox" formControlName="isPublic" class="switch_1">
+        <div class="pad-left-10 label-mp"> Public</div>
+      </div> -->
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <label class="label-mp" for="">MediaMail Title</label>
+    <input formControlName="title" type="text" class="form-control" placeholder="MediaMail Title" (focusout)="updateValue()">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <label class="label-mp" for="">Project Name</label>
+    <input type="text" formControlName="projectName" class="form-control" name="" id="" placeholder="Project Name" (focusout)="updateValue()">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <label class="label-mp" for="">Artist Name</label>
+    <select formControlName="artistName" name="" id="" class="form-control " placeholder="Choose sn Artist">
+        <option value="">Choose sn Artist</option>
+      <option value="f">fad</option>
+    </select>
+  </div>
+</div>
+
+<!-- <button (click)="save(mediaConfigureForm.value)"> sav</button> -->
+</form>
+
+
+
+
+<!-- 
+<h3 class="pt-2">Drag & Drop</h3>
+
+<div class="row">
+  <div class="col-md-12 ">
+    <div class="drag-media">
+         <i class="la la-2x la-video-camera "></i> <span> Video</span>  <i class="la la-2x la-arrows pull-right"></i>
+ </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 ">
+      <div class="drag-media">
+           <i class="la la-2x la-minus "></i> <span> Line Break</span>  <i class="la la-2x la-arrows pull-right"></i>
+   </div>
+    </div>
+  </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12 ">
+          <div class="drag-media">
+               <i class="la la-2x la-file-text "></i> <span> Text Block</span>  <i class="la la-2x la-arrows pull-right"></i>
+       </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 ">
+            <div class="drag-media">
+                 <i class="la la-2x la-music "></i> <span> Audio</span>  <i class="la la-2x la-arrows pull-right"></i>
+         </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 ">
+            <div class="drag-media">
+                 <i class="la la-2x la-image "></i> <span> image</span>  <i class="la la-2x la-arrows pull-right"></i>
+         </div>
+          </div>
+        </div> -->

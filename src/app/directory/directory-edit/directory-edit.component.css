@@ -1,0 +1,95 @@
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    /* margin-bottom: 15px; */
+  }
+  .label-mp{
+    color: rgba(255,255,255,0.5);
+    font-size: 16px;
+    font-weight: 500 !important;
+  }
+  .label-data{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500 !important;
+  }
+  .rectangle-close {	
+      height: 64px;	
+      width: 130px;	
+      border-radius: 4px;
+      color: #28DCCF;	
+      background-color: #06656B;
+      font-family: Montserrat;	
+      font-size: 18px;	
+      font-weight: 500;
+      letter-spacing: 0.17px;	
+      line-height: 39px;	
+      text-align: center;
+    }
+    .rectangle-edit {	
+      height: 64px;	
+      width: 120px;	
+      border-radius: 4px;	
+      background-color: #333333;
+      color: rgb(168, 166, 166);	
+      font-family: Montserrat;	
+      font-size: 18px;	
+      font-weight: 500;	
+      letter-spacing: 0.17px;	
+      line-height: 39px;	
+      text-align: center;
+    }
+    .rectangle-fristname {	
+        width: 100%;	
+    }
+    .white{
+      color: #ffffff
+    }
+
+    section {
+        padding: 5px 0;
+    }
+    
+    section .section-title {
+        text-align: center;
+        /* color: #007b5e; */
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+    #tabs{
+        color: #eee;
+    }
+    #tabs h6.section-title{
+        color: #eee;
+    }
+    
+    #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: #f3f3f3;
+        background-color: transparent;
+        border-color: transparent transparent #f3f3f3;
+        border-bottom: 4px solid #28dccf !important;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .nav-link.active{
+        color:  #4f81bb;
+    }
+    #tabs .nav-tabs .nav-link {
+        border: 1px solid transparent;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        color: #eee;
+        font-size: 20px;
+    }
+    
+    /* grid css */
+    .k-grid-header th.k-header{
+         border-color: transparent; 
+        color: #bbbbbb;
+        background-color: #181818;
+    }
+    .right{
+        float: right;
+    }

@@ -1,0 +1,44 @@
+
+<div class="uploadfilecontainer text-center pt-5" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+    <input hidden type="file" #fileInput  (change)="uploadFile(fileInput)">
+    <span class="la la-3x la-cloud-upload mt-3 "></span>
+    <h4 class="text-center">Drag & Drop CSV File Here</h4>
+  </div>
+
+<div class="row">
+  uploading 
+</div>
+
+  <!-- <div  class="files-list" *ngFor="let file of files;let i= index">
+      <p> {{ file }} </p>
+      <button class="delete-file" (click)="deleteAttachment(i)">
+        <img src="../../assets/Recycle_Bin_Full.png">
+      </button>
+   </div> -->
+<div *ngIf="csvGridData.length > 0">
+  <kendo-grid [kendoGridBinding]="csvGridData" 
+  [pageSize]="10"
+            [pageable]="true"
+            [sortable]="true"
+           
+            [height]="510">
+
+
+<!-- <kendo-grid-column field="Transaction_date" [width]="140"></kendo-grid-column>
+
+<kendo-grid-column field="Name" [width]="140"></kendo-grid-column>
+      <kendo-grid-column field="Product" [width]="140"></kendo-grid-column>
+      <kendo-grid-column field="Price" [width]="140">
+          <ng-template kendoGridCellTemplate let-dataItem>
+<div>{{dataItem.Price}}</div>
+             
+            </ng-template>
+      </kendo-grid-column> -->
+
+      
+    <ng-template ngFor [ngForOf]="columns" let-column>
+      <kendo-grid-column field="{{column}}"></kendo-grid-column>
+    </ng-template>
+  </kendo-grid>
+</div>
+

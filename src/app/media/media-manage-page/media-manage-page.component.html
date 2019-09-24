@@ -1,0 +1,128 @@
+<div class="row m-0">
+
+
+
+  <!-- left black part  -->
+  <div class="col-md-4 col-sm-12 musiclist bg-media-black text-white">
+<!-- <div *ngIf="isMediaComponent">
+    <div (click)="configureScreenchange()" class=" text-left m-2"><i class="la la-2x la-arrow-left"></i></div>
+    <ng-container *ngComponentOutlet="selectedSetupComponent"></ng-container>
+</div> -->
+
+
+    <!-- if default configruation -->
+<!-- <div *ngIf="!isMediaComponent"> -->
+    <div>
+
+
+
+    <div class=" text-right"><i class="la la-2x la-ellipsis-v"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+      <div class="dropdown-menu dropdown-menu-right box-shadow">
+          <button class="dropdown-item text-white" type="button"> <span class="la la-clone"></span> DUPLICATE</button>
+          <button class="dropdown-item text-white" type="button"> <span class="la la-trash"></span> DELETE</button>
+        
+        </div>
+    
+    </div>
+    <h3 class="text-center"> <i class="la  la-plus"></i> New MediaMail</h3>
+
+
+    <div class="row">
+
+      <!-- circle and tittle start  -->
+      <div class="text-center col-md-4 col-xs-4 col-sm-4 padding-0 configuration-indicator">CONFIGURE
+        <div class="mark-navigation">
+          <div class="mark-circle " [ngClass]="{'mark-active': isEnableConfigure}"></div>
+          <div class="line-media-status-right "></div>
+        </div>
+      </div>
+
+      <div class="text-center col-md-4 col-xs-4 col-sm-4 padding-0 configuration-indicator">SOCIAL
+        <div class="mark-navigation">
+          <div class="mark-circle " [ngClass]="{'mark-active': isEnableSocial}"></div>
+          <div class="line-media-status-right "></div>
+          <div class="line-media-status-left "></div>
+        </div>
+      </div>
+      <div class="text-center col-md-4 col-xs-4 col-sm-4 padding-0 configuration-indicator">SHARE
+        <div class="mark-navigation">
+          <div class="mark-circle" [ngClass]="{'mark-active': isEnableShare}"></div>
+          <div class="line-media-status-left "></div>
+        </div>
+      </div>
+
+      <!-- circle and tittle end -->
+
+
+    </div>
+
+    <!-- <app-media-share-setup></app-media-share-setup> -->
+
+
+    <app-media-configure-setup *ngIf="isEnableConfigure"></app-media-configure-setup>
+
+    <app-media-social-setup *ngIf="isEnableSocial"></app-media-social-setup>
+
+    <app-media-share-setup *ngIf="isEnableShare"></app-media-share-setup>
+
+
+</div>
+
+  </div>
+
+
+
+  <!--  white part  -->
+  <div class="col-md-8 col-sm-12 bg-white musiclist">
+
+    <app-media-mail-template *ngIf="!isEnableShare || isEnableSocial || isEnableConfigure"  [editSectionEnable]="isEditComponent" ></app-media-mail-template> 
+   
+    <app-media-email-list *ngIf="isEnableShare" ></app-media-email-list>
+
+  </div>
+</div>
+
+
+<!-- bottom fixed  -->
+<div class="pitchList-Navigation ">
+
+  <div class="row m-0">
+    <div class="col-md-4 p-2 text-white pad-top-10">
+      <i class="la la-2x  la-info-circle"></i> Fill out the general info above & then click next
+    </div>
+    <div class="col-md-5 pad-top-10">
+      <input type="text" class="form-control bg-media-black" [(ngModel)]="previewUrl">
+      <div class="preview" (click)="getViewData()"><i class="la la-external-link"></i> 
+       
+        Preview</div>
+    </div>
+
+
+
+
+    <div class="col-md-3 ">
+      <div class="clearfix"></div>
+
+      <div *ngIf="isEnableConfigure">
+        <div class="media-previous"><i class="la la-angle-left"></i> cancel</div>
+        <div class="media-next text-center" (click)="changeSetUp(mediaMailConfig.SocialSetup)"><i
+            class="la la-angle-right"></i> Next</div>
+      </div>
+
+
+      <div *ngIf="isEnableSocial">
+        <div class="media-previous" (click)="changeSetUp(mediaMailConfig.ConfigureSetup)"><i
+            class="la la-angle-left"></i> Previous</div>
+        <div class="media-next text-center" (click)="changeSetUp(mediaMailConfig.ShareSetup)"><i
+            class="la la-angle-right"></i> Next</div>
+      </div>
+
+      <div *ngIf="isEnableShare">
+        <div class="media-previous" (click)="changeSetUp(mediaMailConfig.SocialSetup)"><i class="la la-angle-left"></i>
+          Previous</div>
+        <div class="media-next text-center"><i class="la la-angle-right"></i> Send</div>
+      </div>
+
+    </div>
+  </div>
+</div>

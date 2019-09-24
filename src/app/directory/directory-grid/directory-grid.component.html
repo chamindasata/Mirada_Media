@@ -1,0 +1,104 @@
+<div class="row">
+  <div class="col-md-12">
+    <section id="tabs">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 ">
+            <nav>
+              <div class="nav nav-tabs flex-column flex-sm-row justify-content-center" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" (click)="toggleContact()" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Contacts</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" (click)="toggleCompany()" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Companies</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" (click)="toggleEmaillist()" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Email List</a>
+                 
+              </div>
+            </nav>
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                
+                <kendo-grid
+                    [data]="view | async"
+                    [pageSize]="10"
+                    [pageable]="true"
+                    [filterable]="false"
+                    [groupable]="false"
+                    [height]="510"
+                    [selectable]="true"
+                    [selectable]="selectableSettings"
+                    [sort]="true"
+                    [sortable]="true"
+
+                    >
+                    <kendo-grid-column field="name" [width]="180"></kendo-grid-column>
+                    <kendo-grid-column field="username" [width]="180"></kendo-grid-column>
+                    <kendo-grid-column field="email" [width]="180"></kendo-grid-column>
+                    
+                    <kendo-grid-column  [width]="100">
+                      <ng-template kendoGridCellTemplate>
+                        <a href="#"><span class="la la-trash-o" style="font-size: 29px"></span></a>&nbsp;&nbsp;&nbsp;
+                        <a href="#"><span class="la la-edit" style="font-size: 29px"></span></a>
+                      </ng-template>
+                    </kendo-grid-column>
+                    <kendo-grid-checkbox-column showSelectAll="true" [width]="50"></kendo-grid-checkbox-column>
+              </kendo-grid>
+
+
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                 
+                <kendo-grid
+                [data]="viewCompany | async"
+                [pageSize]="10"
+                [pageable]="true"
+                [sortable]="true"
+                [filterable]="false"
+                [groupable]="false"
+                [height]="510"
+                [selectable]="true"
+                [selectable]="selectableSettings"
+                    >
+                    <kendo-grid-column field="userId" [width]="225"></kendo-grid-column>
+                    <kendo-grid-column field="id" [width]="225"></kendo-grid-column>
+                    <kendo-grid-column field="title" [width]="225"></kendo-grid-column>
+                    <kendo-grid-column  [width]="100">
+                      <ng-template kendoGridCellTemplate>
+                        <a href="#"><span class="la la-trash-o" style="font-size: 29px"></span></a>&nbsp;&nbsp;&nbsp;
+                        <a href="#"><span class="la la-edit" style="font-size: 29px"></span></a>
+                    </ng-template>
+                    </kendo-grid-column>
+                    <kendo-grid-checkbox-column showSelectAll="true" [width]="50"></kendo-grid-checkbox-column>
+                </kendo-grid>
+
+              </div>
+              <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+               
+                <kendo-grid
+                    [data]="viewEmailList | async"
+                    [pageSize]="10"
+                    [pageable]="true"
+                    [sortable]="true"
+                    [filterable]="false"
+                    [groupable]="false"
+                    [height]="510"
+                    [selectable]="true"
+                    >
+                    <kendo-grid-column field="userId" [width]="300"></kendo-grid-column>
+                    <kendo-grid-column field="title" [width]="300"></kendo-grid-column>
+                    <kendo-grid-column field="completed" [width]="300"></kendo-grid-column>
+                    <kendo-grid-column  [width]="100">
+                      <ng-template kendoGridCellTemplate>
+                        <a href="#"><span class="la la-trash-o" style="font-size: 29px"></span></a>&nbsp;&nbsp;&nbsp;
+                        <a href="#"><span class="la la-edit" style="font-size: 29px"></span></a>
+                    </ng-template>
+                    </kendo-grid-column>
+                    <kendo-grid-checkbox-column showSelectAll="true" [width]="50"></kendo-grid-checkbox-column>
+                </kendo-grid>
+
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

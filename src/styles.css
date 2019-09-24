@@ -1,0 +1,177 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import "../node_modules/ngx-toastr/toastr.css";
+
+.top-pitchlist {
+    height: 200px;
+     background-repeat: no-repeat; 
+    background-size: cover;
+    padding: 10px;
+  
+}
+
+.bg-pink {	border-radius: 2px;	background-color: #FF0085;}
+
+.bg-green { background-color: #6ace6a ; };
+
+.top-song-title { 
+    padding: 12px;
+    display: inline-block;
+}
+    
+
+
+
+.top-pitchlist-title {	height: 28px;	width: 136px;	color: #FFFFFF;	font-family: Montserrat;	font-size: 14px;	font-weight: 500;	letter-spacing: 2px;	line-height: 28px; text-align: center;}
+.text-white{
+    color: white;
+}
+.track-play{
+    background: #28DCCF !important;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    line-height: 1px;
+    padding-top: 2px;
+    padding-left: 3px;
+}
+
+.tracks .track__title {
+    width: 60% !important;
+    margin-left: 30px;
+    color:white;
+}
+.text-grey{
+    color:gray;
+}
+
+.pitch-selectmore{
+      
+       color: #B3B3B3;
+       font-family: Montserrat;
+       font-size: 16px;
+       text-align: center;
+       padding: 2%;
+}
+
+.track:nth-child(odd) {
+    background: #282828;
+  }
+  
+  .track:nth-child(even) {
+    background: #333333;
+  }
+
+  .pad-top-3{
+      padding-top: 3rem;
+  }
+  .font-weight-bold{
+      font-weight: bold;
+  }
+
+  .track-topsong{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: #28dccf;
+    color: white;
+    text-align: center;
+    line-height: 1;
+    float: right;
+    padding-left: 9px;
+    padding-top: 2px;
+    margin-top: 18%;
+    cursor: pointer;
+    -webkit-box-shadow: -1px 10px 8px -1px rgba(40, 220, 207, 0.28);
+    -moz-box-shadow: -1px 10px 8px -1px rgba(40, 220, 207, 0.28);
+    box-shadow: -1px 10px 8px -1px rgba(40, 220, 207, 0.28);
+  }
+
+.track-topsong:hover{
+    margin-top: 15%;
+    -webkit-box-shadow: -7px 28px 25px -4px rgba(17, 156, 146, 0.66);
+-moz-box-shadow: -7px 28px 25px -4px rgba(17, 156, 146, 0.66);
+box-shadow: -7px 28px 25px -4px rgba(17, 156, 146, 0.66);
+
+}
+
+
+
+  .border-grey{
+    border: 1px solid #333333
+  }
+  .top-song-detail{
+      padding: 0% 3% 0% 3% ;
+  }
+
+
+.tracks .track__min{
+    color: white;
+    
+    flex: 1;
+    /* width: 25%; */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.MP_pitchlist{
+    height:90px;
+    background: white;
+}
+.mp_pitchlist_padding{
+    padding-left: 10px;
+}
+
+
+.track .track-user{
+    /* width: 40%; */
+    flex:1;
+    color: white;
+    margin-left: 30px;
+}
+.track .track_Played{
+    width: 30%;
+    color: #28DCCF;
+    
+}
+.pa-le-10{
+    padding-left: 10px;
+}
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgba(255,255,255,0.5) !important;
+    background-color: #000 !important;;
+    background-image: none;
+    border: 1px solid #000 !important;;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.text-white {
+    color:white !important;
+}
+.text-light-grey{
+    color:#b7b7b747;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #181818 !important;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}

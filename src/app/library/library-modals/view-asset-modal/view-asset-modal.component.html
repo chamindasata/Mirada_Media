@@ -1,0 +1,40 @@
+<div class="view-image-modal" *ngIf="type.startsWith('image/')">
+  <div class="modal-header asset-modal-header">
+    <h2 class="asset-title pull-left"><i class="la la-file-image-o"></i>{{title}}</h2>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body image-body">
+    <img class="asset-image" src={{viewUrl}}>
+  </div>
+  <div class="modal-footer asset-modal-footer">
+  </div>
+</div>
+<div class="view-asset-modal"  *ngIf="type === 'application/pdf'">
+    <div class="modal-header asset-modal-header">
+      <h2 class="asset-title pull-left"><i class="la la-file-pdf-o"></i>{{title}}</h2>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body video-body">
+      <pdf-viewer src="{{viewUrl}}" [render-text]="true" style="display: block;"></pdf-viewer>
+    </div>
+  </div>
+  <div class="view-asset-modal" *ngIf="type.startsWith('video/')">
+    <div class="modal-header asset-modal-header">
+      <h2 class="asset-title pull-left"><i class="la la-file-video-o"></i>{{title}}</h2>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body video-body">
+          <video class="asset-video" controls>
+              <source src="{{viewUrl}}" type="video/mp4"  />
+              Browser not supported
+          </video>
+    </div>
+    <div class="modal-footer asset-modal-footer">
+    </div>
+  </div>
