@@ -2,7 +2,6 @@ version: 0.2
 env:
     variables:
         S3_BUCKET: "dev.demotest"
-        BUILD_FOLDER: "codepipeline-us-east-1-91014834567"
         BUILD_ENV: "prod"
 phases:
     install:
