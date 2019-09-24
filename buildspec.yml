@@ -19,7 +19,7 @@ phases:
     post_build:
          commands:
             - aws s3 sync ./dist/musicpub s3://${S3_BUCKET} --acl 'public-read' --delete
-            - echo Build completed on `date`
+            - echo Build completed on  `date`
 artifacts:
     files:
         - '**/*'
