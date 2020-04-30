@@ -36,7 +36,7 @@
     "@progress/kendo-theme-default": "latest",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng-pick-datetime": "^7.0.0",
     "ng2-alt-summernote": "^2.0.0",
     "ng2-pdf-viewer": "^5.3.4",
